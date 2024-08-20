@@ -1,40 +1,25 @@
-# include <iostream>
-using namespace std;
-
-int main() {
-
-  char op;
-  float num1, num2;
-
-  cout << "Enter operator: +, -, *, /: ";
-  cin >> op;
-
-  cout << "Enter two operands: ";
-  cin >> num1 >> num2;
-
-  switch(op) {
-
-    case '+':
-      cout << num1 << " + " << num2 << " = " << num1 + num2;
-      break;
-
-    case '-':
-      cout << num1 << " - " << num2 << " = " << num1 - num2;
-      break;
-
-    case '*':
-      cout << num1 << " * " << num2 << " = " << num1 * num2;
-      break;
-
-    case '/':
-      cout << num1 << " / " << num2 << " = " << num1 / num2;
-      break;
-
-    default:
-      // If the operator is other than +, -, * or /, error message is shown
-      cout << "Error! operator is not correct";
-      break;
+#include<iostream>
+using namespace std ;
+class calculator{
+  private:
+  int num1;
+  int num2;
+  public:
+  void getNum(int n1,int n2){
+    num1 = n1;
+    num2 = n2;
   }
-
+  void add(){
+    cout<<num1 + num2 <<endl;
+  }
+  void sub(){
+    cout<< num1 - num2 << endl;
+  }
+};
+int main(){
+   calculator obj1;
+  obj1.getNum(5,6);
+  obj1.add();
+  obj1.sub();
   return 0;
 }
